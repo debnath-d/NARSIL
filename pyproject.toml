@@ -1,0 +1,22 @@
+[project]
+name = "NARSIL"
+version = "0.1.0"
+dependencies = [
+    "torch==2.8.0",
+    "seaborn>=0.13.2",
+    "tensorboard>=2.20.0",
+    "tqdm>=4.67.1",
+    "pandas>=2.3.3",
+]
+requires-python = "==3.13.*"
+readme = "README.md"
+license = { text = "MIT" }
+
+[tool.ruff]
+ignore = ["E501"] # avoid enforcing line-length violations (`E501`)
+
+[tool.pyright]
+typeCheckingMode = "off"
+
+[tool.uv]
+dev-dependencies = ["ipykernel>=6.29.5"]

@@ -1,0 +1,12 @@
+{
+    "general": {
+        "load_checkpoint": "outputs/tsp1000/checkpoints/best_model_tsp1000.pt",
+        "heatmaps_dir": "heatmaps",
+        "dataset_dir": "dataset",
+        "method_name": "ours",
+        "outputs_dir": "results/ijcnn"
+    },
+    "testing": {
+        "nodes_per_batch": 256000
+    }
+}

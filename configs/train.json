@@ -1,0 +1,43 @@
+{
+    "general": {
+        "outputs_dir": "outputs/last_run",
+        "load_checkpoint": "outputs/tsp1000/checkpoints/best_model_tsp1000.pt",
+        "tensorboard_comment": "",
+        "save_every": 25,
+        "log_every": 2
+    },
+    "model": {
+        "num_layers": 12,
+        "input_dim": 2,
+        "head_dim": 16,
+        "num_heads": 8,
+        "feedforward_factor": 4,
+        "dropout": 0
+    },
+    "training": {
+        "graph_sizes": [
+            1000
+        ],
+        "graph_sizes_range": [],
+        "k_transforms": 2,
+        "num_epochs": 200000,
+        "nodes_per_batch": 6400,
+        "batches_per_epoch": 16,
+        "scheduler": "CosineAnnealingWarmRestarts",
+        "lr": 0.0001,
+        "lr_min_factor": 0,
+        "lr_restart_every": 5000,
+        "warmup_epochs": 5000,
+        "mode": "self_improvement",
+        "clip_grads": true
+    },
+    "validation": {
+        "graph_sizes": [
+            1000
+        ],
+        "validate_every": 100,
+        "k_transforms": 1,
+        "nodes_per_batch": 51200,
+        "batches_per_epoch": 8
+    }
+}
